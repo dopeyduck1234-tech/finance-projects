@@ -1,0 +1,8 @@
+print("Welcome to the annual income calculator.")
+hourly_wage = float(input("What is your hourly wage?"))
+hours_per_day = int(input("How many hours do you work per day?"))
+days_of_week = int(input("How many days a week u work?"))
+rest_days = int(input("How many days of the year do you take vacation/sick leaves on average?"))
+tax = int(input("Tax %?"))
+annual_salary = float(hourly_wage * hours_per_day * days_of_week * 52 - rest_days * hourly_wage * hours_per_day) * (1 - (tax / 100))
+print(f"Your annual income is ${annual_salary:.2f}")
